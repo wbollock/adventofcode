@@ -48,11 +48,18 @@ func processInputPart1(input string) (result int) {
 
 	var distanceSlice []int
 
-	for i, num := range numberSlice {
-		distance := num - numberSlice2[i]
-		if distance < 0 {
-			distance = distance * -1
+	for _, num := range numberSlice {
+		var foundCounter int
+		for _, lameNum := range numberSlice2 {
+			if num == lameNum {
+				foundCounter++
+			}
 		}
+		distance := num * foundCounter
+		// distance := num - numberSlice2[i]
+		// if distance < 0 {
+		// 	distance = distance * -1
+		// }
 		// log.Print(distance)
 		distanceSlice = append(distanceSlice, distance)
 	}

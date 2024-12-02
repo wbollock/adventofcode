@@ -8,7 +8,8 @@ import (
 )
 
 func TestPart1(t *testing.T) {
-	expected := 11
+	// expected := 11
+	expected := 31
 
 	// lazy soluton to deal with test cwd
 	err := os.Chdir("../../")
