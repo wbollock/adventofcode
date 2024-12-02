@@ -9,6 +9,7 @@ import (
 
 func TestPart1(t *testing.T) {
 	expected := 2
+	// expected := 4
 
 	err := os.Chdir("../../../")
 	if err != nil {
