@@ -8,5 +8,6 @@ new-day:
     new_day=$(printf "%02d" $((10#$last_day + 1))) && \
     touch 2024/input/day$new_day && \
     touch 2024/input/day$new_day"test" && \
-    touch 2024/solution/day$new_day".go" && \
-    touch 2024/solution/day$new_day"_test.go"
+    mkdir 2024/solution/day$new_day && \
+    touch 2024/solution/day$new_day/day$new_day".go" && \
+    touch 2024/solution/day$new_day/day$new_day"_test.go"
